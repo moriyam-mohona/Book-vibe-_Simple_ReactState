@@ -20,14 +20,17 @@ const Header = () => {
                     </div>
                     <a className='text-3xl font-bold'>Book Vibe</a>
                 </div>
-                <div className="navbar-center hidden lg:flex gap-10">
-                    <NavLink to='/' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-lg text-xl font-semibold px-4 py-3 text-[#23BE0A]' : ' text-xl font-medium '}>Home</NavLink>
-                    <NavLink to='/listedBooks' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-lg text-xl font-semibold px-4 py-3 text-[#23BE0A]' : ' text-xl font-medium'}>Listed Books</NavLink>
-                    <NavLink to='/pagesToRead' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-lg text-xl font-semibold px-4 py-3 text-[#23BE0A]' : ' text-xl font-medium '}>Pages to Read</NavLink>
+                <div className="navbar-center hidden lg:flex gap-5">
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>Home</NavLink>
+                    <NavLink to='/listedBooks' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium'}>Listed Books</NavLink>
+                    <NavLink to='/pagesToRead' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>Pages to Read</NavLink>
+                    <NavLink to='/faq' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>FAQ</NavLink>
+                    <NavLink to='/about' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>About</NavLink>
+
                 </div>
                 <div className="navbar-end flex gap-3">
-                    <button className="btn bg-[#23BE0A] text-white px-8" >Sign In</button>
-                    <button className="btn bg-[#59C6D2] text-white px-8">Sign Up</button>
+                    <button className="btn bg-[#23BE0A] text-white text-md px-8" >Sign In</button>
+                    <button className="btn bg-[#59C6D2] text-white text-md px-8">Sign Up</button>
 
                 </div>
             </div>

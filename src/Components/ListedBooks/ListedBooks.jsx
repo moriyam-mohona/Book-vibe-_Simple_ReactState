@@ -8,7 +8,7 @@ const ListedBooks = () => {
     return (
         <div>
             <div>
-                <h3 className='bg-gray-100 rounded-2xl items-center text-2xl font-bold flex justify-center py-5'>Books</h3>
+                <h3 className='bg-gray-100 rounded-2xl items-center text-4xl font-bold flex justify-center py-5'>Books</h3>
                 <div className="flex justify-center items-center my-5">
                     <details className="dropdown">
                         <summary className="bg-[#23BE0A] text-white px-8 py-3 flex items-center gap-2 rounded-xl">Sort By <IoIosArrowDown className='text-xl font-bold'></IoIosArrowDown></summary>
