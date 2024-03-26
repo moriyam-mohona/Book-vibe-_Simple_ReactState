@@ -17,7 +17,7 @@ import ReadBooks from './Components/ReadBooks/ReadBooks';
 import WishListBooks from './Components/WishListBooks/WishListBooks';
 import About from './Components/About/About';
 
-import FAQ from './Components/FAQ/FAQ';
+import Blogs from './Components/Blogs/Blogs';
 
 
 const router = createBrowserRouter([
@@ -61,8 +61,8 @@ const router = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: '/faq',
-        element: <FAQ></FAQ>,
+        path: '/blogs',
+        element: <Blogs></Blogs>
       },
 
     ],

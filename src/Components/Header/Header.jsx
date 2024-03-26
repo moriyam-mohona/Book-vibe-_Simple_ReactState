@@ -15,6 +15,8 @@ const Header = () => {
                                 <Link to='/' className=' px-7 py-3 text-xl font-medium'>Home</Link>
                                 <Link to='/listedBooks' className=' px-7 py-3 text-xl font-medium'>Listed Books</Link>
                                 <Link to='/pagesToRead' className=' px-7 py-3 text-xl font-medium'>Pages to Read</Link>
+                                <Link to='/blogs' className=' px-7 py-3 text-xl font-medium'>Blogs</Link>
+                                <Link to='/about' className=' px-7 py-3 text-xl font-medium'>About</Link>
                             </li>
                         </ul>
                     </div>
@@ -24,7 +26,7 @@ const Header = () => {
                     <NavLink to='/' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>Home</NavLink>
                     <NavLink to='/listedBooks' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium'}>Listed Books</NavLink>
                     <NavLink to='/pagesToRead' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>Pages to Read</NavLink>
-                    <NavLink to='/faq' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>FAQ</NavLink>
+                    <NavLink to='/blogs' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>Blogs</NavLink>
                     <NavLink to='/about' className={({ isActive }) => isActive ? 'border border-[#23BE0A] rounded-xl text-md font-semibold px-4 py-1 text-[#23BE0A]' : ' text-md font-medium '}>About</NavLink>
 
                 </div>

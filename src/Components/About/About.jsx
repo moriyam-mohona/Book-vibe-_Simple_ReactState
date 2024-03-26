@@ -2,7 +2,7 @@ import founder from '../../assets/images/founder.png';
 const About = () => {
     return (
         <div>
-            <section className="py-10 px-4 sm:px-8">
+            <section className=" px-4 sm:px-8">
                 <h3 className='bg-gray-100 rounded-2xl items-center text-4xl font-bold flex justify-center py-5 mb-10'>About</h3>
                 <div className="max-w-4xl mx-auto">
                     <p className="mb-4 text-center">"The man who does not read good books has no advantage over the man who cannot read them."

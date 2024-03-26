@@ -16,14 +16,14 @@ const WishListBooks = () => {
         <div>
             <div>
                 {books.map(book => (
-                    <div key={book.bookId} className="flex gap-5 my-5 rounded-xl p-5 border border-slate-300 ">
-                        <div className="">
-                            <img className='h-48 w-40 rounded-xl' src={book.image} alt={book.bookName} />
-                        </div>
+                    <div key={book.bookId} className="flex flex-col lg:flex-row gap-5 my-5 rounded-xl p-5 border border-slate-300 w-auto">
                         <div>
-                            <h2 className='text-2xl font-semibold'>{book.bookName}</h2>
-                            <p className='text-lg'>By : {book.author}</p>
-                            <div className="flex items-center gap-5 text-lg my-3">
+                            <img className='h-48 mx-auto lg:w-40 rounded-xl ' src={book.image} alt={book.bookName} />
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <h2 className='text-2xl font-semibold '>{book.bookName}</h2>
+                            <p className='text-lg mx-auto'>By : {book.author}</p>
+                            <div className="flex flex-col lg:flex-row items-center gap-5 text-lg my-3">
                                 <p className='font-bold flex gap-3'>Tags: {book.tags && book.tags.map((tag, index) => (
                                     <div key={index} className="badge text-base text-[#23BE0A] p-4 bg-[#ebf8e9]">#{tag}</div>
                                 ))}</p>

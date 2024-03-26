@@ -16,7 +16,7 @@ const BookDetails = () => {
         <div className="lg:p-8">
             {book && (
                 <div className=" flex flex-col lg:flex-row">
-                    <img src={book.image} alt={book.bookName} className="p-6 w-96 h-fit mr-8" />
+                    <img src={book.image} alt={book.bookName} className="p-6 w-auto lg:w-96 h-fit mr-8" />
                     <div>
                         <h1 className="text-3xl font-bold mb-4">{book.bookName}</h1>
                         <p className="text-lg font-medium mb-2">By :  {book.author}</p>
@@ -39,8 +39,8 @@ const BookDetails = () => {
                             <p className=""><span className="font-bold">Rating: </span> {book.rating}</p>
                         </div>
                         <div className="flex gap-7">
-                            <Link to=''><button onClick={() => handleReadBooks(book)} className="btn btn-outline px-5 text-md rounded-xl py-1">Read</button></Link>
-                            <Link to=''><button onClick={() => handleWishBooks(book)} className="btn btn-info px-5 text-md rounded-xl py-1 text-white">Wishlist</button></Link>
+                            <Link to=''><button onClick={() => handleReadBooks(book)} className="btn btn-outline px-10 text-lg  rounded-xl py-1">Read</button></Link>
+                            <Link to=''><button onClick={() => handleWishBooks(book)} className="btn btn-info px-10 text-lg  rounded-xl py-1 text-white">Wishlist</button></Link>
                         </div>
                     </div>
                 </div>
