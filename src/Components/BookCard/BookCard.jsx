@@ -12,13 +12,12 @@ const BookCard = ({ book, className }) => {
     }
 
     return (
-        <div className={`card w-auto bg-base-100 border border-gray-300 shadow-xl flex flex-col justify-between mx-4 ${className}`}> {/* Add margin on both sides */}
+        <div className={`card w-auto bg-base-100 border border-gray-300 shadow-xl flex flex-col justify-between mx-4 ${className}`}>
             <Link to={`/book/${bookId}`} className="">
-                <figure className="px-10 pt-10 mb-10">
-                    <img src={image} alt={bookName} className="rounded-xl w-full h-80 object-cover" /> {/* Set fixed height and width */}
+                <figure className="px-2 pt-10 mb-10">
+                    <img src={image} alt={bookName} className="rounded-xl w-full h-80 object-contain" />
                 </figure>
                 <div className="card-actions ml-5">
-                    {/* Render tags if available */}
                     {book.tags && book.tags.map((tag, index) => (
                         <div key={index} className="badge badge-outline text-base text-[#23BE0A] p-4 border-[#23BE0A]">{tag}</div>
                     ))}

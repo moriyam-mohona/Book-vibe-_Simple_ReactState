@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Toaster } from 'react-hot-toast';
 import './index.css'
 import {
   createBrowserRouter,
@@ -12,6 +13,8 @@ import ListedBooks from './Components/ListedBooks/ListedBooks';
 import PagesToRead from './Components/PagesToRead/PagesToRead';
 
 import BookDetails from './Components/BookDetails/BookDetails';
+import ReadBooks from './Components/ReadBooks/ReadBooks';
+import WishListBooks from './Components/WishListBooks/WishListBooks';
 
 
 const router = createBrowserRouter([
@@ -32,7 +35,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/listedBooks',
-        element: <ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>,
+        children: [
+          {
+            index: true,
+            // path: `readBooks`,
+            element: <ReadBooks></ReadBooks>
+          },
+          {
+            path: `wishListBooks`,
+            element: <WishListBooks></WishListBooks>
+          }
+
+        ],
       },
       {
         path: '/pagesToRead',
@@ -48,5 +63,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Toaster />
   </React.StrictMode>,
 )

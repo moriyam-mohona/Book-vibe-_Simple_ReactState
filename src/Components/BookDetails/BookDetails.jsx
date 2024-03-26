@@ -1,12 +1,16 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { saveBook } from "../../utils";
 
 const BookDetails = () => {
-    const allBooks = useLoaderData(); // Assuming useLoaderData is a custom hook or function to fetch all books
+    const allBooks = useLoaderData();
     console.log(allBooks);
 
-    const { bookId } = useParams(); // Correcting useParams
+    const { bookId } = useParams();
+    const book = allBooks.find(b => b.bookId === parseInt(bookId));
 
-    const book = allBooks.find(b => b.bookId === parseInt(bookId)); // Correcting find method
+    const handleReadBooks = book => {
+        saveBook(book)
+    }
 
     return (
         <div className="lg:p-8">
@@ -35,8 +39,8 @@ const BookDetails = () => {
                             <p className=""><span className="font-bold">Rating: </span> {book.rating}</p>
                         </div>
                         <div className="flex gap-7">
-                            <Link to='/listedBooks'><button className="btn btn-outline px-5 text-md rounded-xl py-1">Read</button></Link>
-                            <Link to='/listedBooks'><button className="btn btn-info px-5 text-md rounded-xl py-1 text-white">Wishlist</button></Link>
+                            <Link to=''><button onClick={() => handleReadBooks(book)} className="btn btn-outline px-5 text-md rounded-xl py-1">Read</button></Link>
+                            <Link to=''><button onClick={() => handleWishBooks(book)} className="btn btn-info px-5 text-md rounded-xl py-1 text-white">Wishlist</button></Link>
                         </div>
                     </div>
                 </div>
