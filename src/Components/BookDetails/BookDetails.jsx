@@ -1,15 +1,16 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { saveBook } from "../../utils";
+import { saveBook, saveWishBook } from "../../utils";
 
 const BookDetails = () => {
     const allBooks = useLoaderData();
-    console.log(allBooks);
-
     const { bookId } = useParams();
     const book = allBooks.find(b => b.bookId === parseInt(bookId));
 
     const handleReadBooks = book => {
         saveBook(book)
+    }
+    const handleWishBooks = book => {
+        saveWishBook(book)
     }
 
     return (

@@ -4,9 +4,6 @@ import { FaRegStar } from "react-icons/fa";
 const BookCard = ({ book, className }) => {
 
     const { bookId, image, bookName, author, category, rating } = book;
-
-    // You can also add a condition to check if the book object exists
-    // This is helpful to prevent errors if book object is missing
     if (!book) {
         return <div>No book data available</div>;
     }

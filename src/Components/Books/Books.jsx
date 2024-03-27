@@ -4,7 +4,7 @@ import BookCard from "../BookCard/BookCard";
 const Books = () => {
     const books = useLoaderData();
 
-    // Check if books is an array and has items
+
     if (!Array.isArray(books) || books.length === 0) {
         return <div>No books found</div>;
     }
