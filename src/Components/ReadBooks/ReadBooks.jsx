@@ -19,7 +19,7 @@ const ReadBooks = () => {
                         <img className='h-48 mx-auto lg:w-40 rounded-xl ' src={book.image} alt={book.bookName} />
                     </div>
                     <div className="flex flex-col items-center lg:items-start">
-                        <h2 className='text-2xl font-semibold '>{book.bookName}</h2>
+                        <h2 className='text-2xl font-semibold font-play '>{book.bookName}</h2>
                         <p className='text-lg '>By : {book.author}</p>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-5 text-lg my-3">
                             <p className='font-bold flex gap-3'>Tags: {book.tags && book.tags.map((tag, index) => (

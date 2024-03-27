@@ -20,7 +20,7 @@ const BookCard = ({ book, className }) => {
                     ))}
                 </div>
                 <div className="card-body text-xl px-6 pb-6">
-                    <h2 className="card-title">{bookName}</h2>
+                    <h2 className="card-title font-play font-bold">{bookName}</h2>
                     <p>by: {author}</p>
                     <div className="flex flex-grow">
                         <p>{category}</p>

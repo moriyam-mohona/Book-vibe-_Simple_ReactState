@@ -19,7 +19,7 @@ const BookDetails = () => {
                 <div className=" flex flex-col lg:flex-row">
                     <img src={book.image} alt={book.bookName} className="p-6 w-auto lg:w-96 h-fit mr-8" />
                     <div>
-                        <h1 className="text-3xl font-bold mb-4">{book.bookName}</h1>
+                        <h1 className="text-3xl font-bold mb-4 font-play">{book.bookName}</h1>
                         <p className="text-lg font-medium mb-2">By :  {book.author}</p>
                         <hr className="my-4" />
                         <p className="text-lg">{book.category}</p>
