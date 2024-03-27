@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Cell, ResponsiveContainer } from 'recharts';
 import { getBooks } from '../../utils'; // Assuming you have a utility function to get books from local storage
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -34,20 +34,23 @@ const BookChart = () => {
     }, []);
 
     return (
-        <div className='bg-gray-100 px-10 py-20'>
-            <BarChart width={1000} height={400} data={bookData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" angle={-90} interval={0} textAnchor="end" />
-                <YAxis />
-                <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
+        <div className='bg-gray-100 max-w-screen  lg:p-10'>
 
-                <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar></TriangleBar>} >
-                    {bookData.map((entry, index) => (
+            <ResponsiveContainer width='90%' height={400}>
+                <BarChart data={bookData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip wrapperStyle={{ width: '30%', backgroundColor: '#ccc' }} />
 
-                        <Cell key={`cell-${index}`} fill={entry.fill} />
-                    ))}
-                </Bar>
-            </BarChart>
+                    <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar></TriangleBar>} >
+                        {bookData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} />
+                        ))}
+                    </Bar>
+                </BarChart>
+            </ResponsiveContainer>
+
         </div>
     );
 };
